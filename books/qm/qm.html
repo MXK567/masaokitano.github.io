@@ -1,0 +1,659 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="北野正雄" name="author" />
+<meta content="ja_JP" property="og:locale" />
+
+    <title>量子力学の基礎 &#8212; kitano&#39;s page</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=56c4699f" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=7b8516c7"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=8b21d8d7"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'books/qm/qm';</script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="新版マクスウェル方程式-- 電磁気学のよりよい理解のために" href="../emf/emf.html" />
+    <link rel="prev" title="新SI単位と電磁気学" href="../si/si.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ja"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="kitano's page - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="kitano's page - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="検索" aria-label="検索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">検索</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">目次</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">教科書</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../dynamics/dynamics.html">力学講義ノート – 基礎から解析力学入門へ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../si/si.html">新SI単位と電磁気学</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">量子力学の基礎</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../emf/emf.html">新版マクスウェル方程式-- 電磁気学のよりよい理解のために</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ec/ec.html">電子回路の基礎</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../notes/index.html">ノート</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../notes/emf/B-only.html">磁場はBだけではうまく表せない</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notes/emf/EB-correspondence.html">E-B対応派はD, Hがお嫌い？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notes/emf/Z0.html">真空のインピーダンスと単位系</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notes/emf/ampere.html">アンペアの大きさの定義について</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notes/emf/constitutive4.html">相対論的構成方程式とホッジ双対</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notes/emf/d-current.html">変位電流をめぐる混乱について</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notes/emf/density.html">密度量の微分形式的な理解について</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notes/emf/dual-metric.html">双対構造と計量</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notes/emf/gaussian.html">消え行くガウス単位系</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notes/emf/levi-civita.html">Levi-Civita の記号の縮約公式の幾何学的解釈</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notes/emf/magnetic-coulomb.html">半無限ソレノイド間の力と磁荷に対するクーロンの法則</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notes/emf/mono-field-ism.html">一場主義 (Mono-field-ism)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notes/emf/mu0.html">真空の透磁率の数値について</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notes/emf/parity.html">電磁気学におけるパリティについて</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notes/emf/speed-of-light.html">机の上で光速を測る</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notes/emf/spintronics.html">スピントロニクスの不思議</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notes/emf/theory-of-unit-systems.html">単位系の数学的構造について</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notes/emf/theory-of-unit-systems-2.html">単位系の数学的構造 (2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notes/emf/unit-conversion.html">単位の変換について</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notes/emf/unit-systems.html">電磁気の単位系</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notes/qm/bracket.html">ブラケット記法の機微　双対 vs 内積</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notes/qm/bracket-error.html">岩波講座 現代物理学の基礎(第2版) 量子力学Iの誤り</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notes/qm/bracket-error-2.html">Re:岩波講座 現代物理学の基礎(第2版) 量子力学Iの誤り</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notes/qm/entanglement.html">エンタングルメントとベルの不等式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notes/qm/photon.html">光の量子性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notes/qm/weak-values.html">弱測定と幾何学的位相</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../toys/index.html">物理おもちゃ</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../toys/cd-spectrometer.html">CD分光器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../toys/eddington.html">レビ・チビタの記号</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../toys/minimal-surface.html">極小曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../toys/ping-pong.html">静電ピンポン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../toys/rattle-back.html">ラトルバック (ケルトの石)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../toys/wine-glass.html">ワイングラスの共鳴を見る</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../presentation/index.html">講演資料</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../presentation/quatuo.html">QUATUO研究会発表資料</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../_tags/tagsindex.html">タグ一覧</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_tags/bh%E5%AF%BE%E5%BF%9C.html">BH対応 (2)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/B-only.html">磁場はBだけではうまく表せない</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/spintronics.html">スピントロニクスの不思議</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_tags/eb%E5%AF%BE%E5%BF%9C.html">EB対応 (2)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/EB-correspondence.html">E-B対応派はD, Hがお嫌い？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/gaussian.html">消え行くガウス単位系</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_tags/eh%E5%AF%BE%E5%BF%9C.html">EH対応 (1)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/mono-field-ism.html">一場主義 (Mono-field-ism)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_tags/quatuo.html">QUATUO (1)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../presentation/quatuo.html">QUATUO研究会発表資料</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_tags/%E3%82%A8%E3%83%B3%E3%82%BF%E3%83%B3%E3%82%B0%E3%83%AB%E3%83%A1%E3%83%B3%E3%83%88.html">エンタングルメント (1)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/qm/entanglement.html">エンタングルメントとベルの不等式</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_tags/%E3%83%8E%E3%83%BC%E3%83%88.html">ノート (25)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/B-only.html">磁場はBだけではうまく表せない</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/EB-correspondence.html">E-B対応派はD, Hがお嫌い？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/Z0.html">真空のインピーダンスと単位系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/ampere.html">アンペアの大きさの定義について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/constitutive4.html">相対論的構成方程式とホッジ双対</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/d-current.html">変位電流をめぐる混乱について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/density.html">密度量の微分形式的な理解について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/dual-metric.html">双対構造と計量</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/gaussian.html">消え行くガウス単位系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/levi-civita.html">Levi-Civita の記号の縮約公式の幾何学的解釈</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/magnetic-coulomb.html">半無限ソレノイド間の力と磁荷に対するクーロンの法則</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/mono-field-ism.html">一場主義 (Mono-field-ism)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/mu0.html">真空の透磁率の数値について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/parity.html">電磁気学におけるパリティについて</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/speed-of-light.html">机の上で光速を測る</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/spintronics.html">スピントロニクスの不思議</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/theory-of-unit-systems-2.html">単位系の数学的構造 (2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/theory-of-unit-systems.html">単位系の数学的構造について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/unit-conversion.html">単位の変換について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/unit-systems.html">電磁気の単位系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/qm/bracket-error-2.html">Re:岩波講座 現代物理学の基礎(第2版) 量子力学Iの誤り</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/qm/bracket-error.html">岩波講座 現代物理学の基礎(第2版) 量子力学Iの誤り</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/qm/bracket.html">ブラケット記法の機微　双対 vs 内積</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/qm/entanglement.html">エンタングルメントとベルの不等式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/qm/photon.html">光の量子性</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_tags/%E3%83%8E%E3%83%BC%E3%83%88.html">ノート (1)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/B-only.html">磁場はBだけではうまく表せない</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/EB-correspondence.html">E-B対応派はD, Hがお嫌い？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/Z0.html">真空のインピーダンスと単位系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/ampere.html">アンペアの大きさの定義について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/constitutive4.html">相対論的構成方程式とホッジ双対</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/d-current.html">変位電流をめぐる混乱について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/density.html">密度量の微分形式的な理解について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/dual-metric.html">双対構造と計量</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/gaussian.html">消え行くガウス単位系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/levi-civita.html">Levi-Civita の記号の縮約公式の幾何学的解釈</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/magnetic-coulomb.html">半無限ソレノイド間の力と磁荷に対するクーロンの法則</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/mono-field-ism.html">一場主義 (Mono-field-ism)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/mu0.html">真空の透磁率の数値について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/parity.html">電磁気学におけるパリティについて</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/speed-of-light.html">机の上で光速を測る</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/spintronics.html">スピントロニクスの不思議</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/theory-of-unit-systems-2.html">単位系の数学的構造 (2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/theory-of-unit-systems.html">単位系の数学的構造について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/unit-conversion.html">単位の変換について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/unit-systems.html">電磁気の単位系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/qm/bracket-error-2.html">Re:岩波講座 現代物理学の基礎(第2版) 量子力学Iの誤り</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/qm/bracket-error.html">岩波講座 現代物理学の基礎(第2版) 量子力学Iの誤り</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/qm/bracket.html">ブラケット記法の機微　双対 vs 内積</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/qm/entanglement.html">エンタングルメントとベルの不等式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/qm/photon.html">光の量子性</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_tags/%E3%83%96%E3%83%A9%E3%82%B1%E3%83%83%E3%83%88%E8%A8%98%E6%B3%95.html">ブラケット記法 (1)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/qm/bracket-error-2.html">Re:岩波講座 現代物理学の基礎(第2版) 量子力学Iの誤り</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_tags/%E5%85%89%E5%AD%A6.html">光学 (1)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../toys/cd-spectrometer.html">CD分光器</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_tags/%E5%85%89%E9%80%9F.html">光速 (1)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/speed-of-light.html">机の上で光速を測る</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_tags/%E5%88%86%E5%85%89.html">分光 (1)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../toys/cd-spectrometer.html">CD分光器</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_tags/%E5%8A%9B%E5%AD%A6.html">力学 (2)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../toys/ping-pong.html">静電ピンポン</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../toys/rattle-back.html">ラトルバック (ケルトの石)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_tags/%E5%8D%98%E4%BD%8D%E7%B3%BB.html">単位系 (4)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/Z0.html">真空のインピーダンスと単位系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/theory-of-unit-systems-2.html">単位系の数学的構造 (2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/theory-of-unit-systems.html">単位系の数学的構造について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/unit-conversion.html">単位の変換について</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_tags/%E5%8F%8C%E5%AF%BE.html">双対 (5)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/constitutive4.html">相対論的構成方程式とホッジ双対</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/dual-metric.html">双対構造と計量</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/qm/bracket-error.html">岩波講座 現代物理学の基礎(第2版) 量子力学Iの誤り</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/qm/bracket.html">ブラケット記法の機微　双対 vs 内積</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/qm/photon.html">光の量子性</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_tags/%E5%8F%A4%E5%85%B8%E5%8A%9B%E5%AD%A6.html">古典力学 (1)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../toys/wine-glass.html">ワイングラスの共鳴を見る</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_tags/%E5%A4%89%E4%BD%8D%E9%9B%BB%E6%B5%81.html">変位電流 (1)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/d-current.html">変位電流をめぐる混乱について</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_tags/%E5%BC%B1%E6%B8%AC%E5%AE%9A.html">弱測定 (1)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_tags/%E5%BE%AE%E5%88%86%E5%BD%A2%E5%BC%8F.html">微分形式 (7)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/ampere.html">アンペアの大きさの定義について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/density.html">密度量の微分形式的な理解について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/levi-civita.html">Levi-Civita の記号の縮約公式の幾何学的解釈</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/magnetic-coulomb.html">半無限ソレノイド間の力と磁荷に対するクーロンの法則</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/mu0.html">真空の透磁率の数値について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/parity.html">電磁気学におけるパリティについて</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/unit-systems.html">電磁気の単位系</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_tags/%E6%8C%AF%E5%8B%95.html">振動 (1)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../toys/wine-glass.html">ワイングラスの共鳴を見る</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_tags/%E6%95%B0%E5%AD%A6.html">数学 (2)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../toys/eddington.html">レビ・チビタの記号</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../toys/minimal-surface.html">極小曲面</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_tags/%E7%89%A9%E7%90%86%E3%81%8A%E3%82%82%E3%81%A1%E3%82%83.html">物理おもちゃ (6)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../toys/cd-spectrometer.html">CD分光器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../toys/eddington.html">レビ・チビタの記号</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../toys/minimal-surface.html">極小曲面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../toys/ping-pong.html">静電ピンポン</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../toys/rattle-back.html">ラトルバック (ケルトの石)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../toys/wine-glass.html">ワイングラスの共鳴を見る</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_tags/%E7%A0%94%E7%A9%B6%E4%BC%9A.html">研究会 (1)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../presentation/quatuo.html">QUATUO研究会発表資料</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6.html">量子力学 (5)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/qm/bracket-error-2.html">Re:岩波講座 現代物理学の基礎(第2版) 量子力学Iの誤り</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/qm/bracket-error.html">岩波講座 現代物理学の基礎(第2版) 量子力学Iの誤り</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/qm/bracket.html">ブラケット記法の機微　双対 vs 内積</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/qm/entanglement.html">エンタングルメントとベルの不等式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/qm/photon.html">光の量子性</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6.html">量子力学 (1)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/qm/bracket-error-2.html">Re:岩波講座 現代物理学の基礎(第2版) 量子力学Iの誤り</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/qm/bracket-error.html">岩波講座 現代物理学の基礎(第2版) 量子力学Iの誤り</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/qm/bracket.html">ブラケット記法の機微　双対 vs 内積</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/qm/entanglement.html">エンタングルメントとベルの不等式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/qm/photon.html">光の量子性</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_tags/%E9%9B%BB%E7%A3%81%E6%B0%97.html">電磁気 (1)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../toys/ping-pong.html">静電ピンポン</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_tags/%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6.html">電磁気学 (20)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/B-only.html">磁場はBだけではうまく表せない</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/EB-correspondence.html">E-B対応派はD, Hがお嫌い？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/Z0.html">真空のインピーダンスと単位系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/ampere.html">アンペアの大きさの定義について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/constitutive4.html">相対論的構成方程式とホッジ双対</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/d-current.html">変位電流をめぐる混乱について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/density.html">密度量の微分形式的な理解について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/dual-metric.html">双対構造と計量</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/gaussian.html">消え行くガウス単位系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/levi-civita.html">Levi-Civita の記号の縮約公式の幾何学的解釈</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/magnetic-coulomb.html">半無限ソレノイド間の力と磁荷に対するクーロンの法則</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/mono-field-ism.html">一場主義 (Mono-field-ism)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/mu0.html">真空の透磁率の数値について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/parity.html">電磁気学におけるパリティについて</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/speed-of-light.html">机の上で光速を測る</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/spintronics.html">スピントロニクスの不思議</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/theory-of-unit-systems-2.html">単位系の数学的構造 (2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/theory-of-unit-systems.html">単位系の数学的構造について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/unit-conversion.html">単位の変換について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notes/emf/unit-systems.html">電磁気の単位系</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="このページをダウンロード">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/books/qm/qm.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="ソースファイルをダウンロード"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="PDFに印刷"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="全画面モード"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="検索" aria-label="検索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>量子力学の基礎</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1><a class="reference external" href="https://www.kyoritsu-pub.co.jp/book/b10007851.html">量子力学の基礎</a><a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p><img alt="cover" src="../../_images/qm-cover.jpg" /></p>
+<ul class="simple">
+<li><p>北野正雄 [著]</p></li>
+<li><p>共立出版 2010年1月</p></li>
+<li><p>ISBN978-4-320-03462-4</p></li>
+<li><p>経緯</p>
+<ul>
+<li><p>2010.01 初版第1刷</p></li>
+<li><p>2012.04 初版第2刷</p></li>
+</ul>
+</li>
+<li><p>正誤表</p>
+<ul>
+<li><p>初版第1刷への訂正 <a class="reference download internal" download="" href="../../_downloads/0c99c4da88e2360450b3899c14b4dc5a/err0.pdf"><span class="xref download myst">(err0.pdf)</span></a></p></li>
+<li><p>初版第2刷への訂正 <a class="reference download internal" download="" href="../../_downloads/0703e7824586a8d8b8f121f9ce28cba3/err2.pdf"><span class="xref download myst">(err2.pdf)</span></a></p></li>
+<li><p>初版第3刷への訂正 <a class="reference download internal" download="" href="../../_downloads/5a00da1026f26ee5e90de97ddd685817/err3.pdf"><span class="xref download myst">(err3.pdf)</span></a>, <a class="reference download internal" download="" href="../../_downloads/fb51f0fd4ce7fc517b77c033c055b966/err3a.pdf"><span class="xref download myst">(err3a.pdf)</span></a></p></li>
+</ul>
+</li>
+<li><p>書評</p>
+<ul>
+<li><p>日本物理学会誌2011年８月号　(筒井泉氏, KEK) <a class="reference external" href="http://www.jps.or.jp/books/newbook/rev_2011.html#15">(link)</a></p></li>
+</ul>
+</li>
+<li><p>関連資料</p></li>
+</ul>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+著者 Masao Kitano
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Masao Kitano.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
