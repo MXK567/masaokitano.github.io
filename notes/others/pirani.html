@@ -1,0 +1,539 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="北野正雄" name="author" />
+<meta content="ja_JP" property="og:locale" />
+
+    <title>ピラニーゲージの読み &#8212; kitano&#39;s page</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=56c4699f" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=7b8516c7"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=8b21d8d7"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/translations.js?v=4755f45a"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>window.MathJax = {"tex": {"macros": {"degree": "\\mbox{$^\\circ$}", "ii": "\\mathrm{i}", "jj": "\\,\\mathrm{j}", "ee": "\\mathrm{e}", "dd": "\\mathrm{d}", "Re": "\\mathop{\\mathrm{Re}}", "Im": "\\mathop{\\mathrm{Im}}", "cc": "\\mbox{c.c.}", "Hc": "\\mbox{H.c.}", "bra": ["\\langle\\mbox{$#1$}|", 1], "ket": ["|\\mbox{$#1$}\\rangle", 1], "bracket": ["\\langle\\mbox{$#1$}\\rangle", 1], "bracketi": ["\\langle\\mbox{$#1$}|\\mbox{$#2$}\\rangle", 2], "bracketii": ["\\langle\\mbox{$#1$}|\\mbox{$#2$}|\\mbox{$#3$}\\rangle", 3], "diver": "\\mathop{\\mathrm{div}}", "curl": "\\mathop{\\mathrm{curl}}", "rot": "\\mathop{\\mathrm{rot}}", "grad": "\\mathop{\\mathrm{grad}}", "sub": ["_{\\mathrm{#1}}", 1], "sur": ["^{\\mathrm{#1}}", 1], "vct": ["\\boldsymbol{#1}", 1], "U": ["\\mathrm{#1}", 1], "pdfrac": ["\\frac{\\partial#1}{\\partial#2}", 2], "simD": "\\stackrel{\\text{SI}}{\\sim}", "vnabla": "\\vct{\\nabla}", "NN": "\\nonumber\\\\"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notes/others/pirani';</script>
+    <link rel="canonical" href="https://mxk567.github.io/notes/others/pirani.html" />
+    <link rel="icon" href="../../_static/m.png"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="物理おもちゃ" href="../../toys/index.html" />
+    <link rel="prev" title="その他" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ja"/>
+    <meta name="docbuild:last-update" content="2025/06/20"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="kitano's page - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="kitano's page - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="検索" aria-label="検索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">検索</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">目次</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../books/index.html">教科書</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../books/dynamics/index.html">力学講義ノート – 基礎から解析力学入門へ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../books/si/index.html">新SI単位と電磁気学</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../books/qm/index.html">量子力学の基礎</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../books/emf/index.html">新版マクスウェル方程式-- 電磁気学のよりよい理解のために</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../books/ec/index.html">電子回路の基礎</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">ノート</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../emf/index.html">電磁気学</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../emf/B-only.html">磁場はBだけではうまく表せない</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emf/EB-correspondence.html">E-B対応派はD, Hがお嫌い？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emf/Z0.html">真空のインピーダンスと単位系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emf/ampere.html">アンペアの大きさの定義について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emf/constitutive4.html">相対論的構成方程式とホッジ双対</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emf/d-current.html">変位電流をめぐる混乱について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emf/density.html">密度量の微分形式的な理解について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emf/dual-metric.html">双対構造と計量</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emf/gaussian.html">消え行くガウス単位系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emf/levi-civita.html">Levi-Civita の記号の縮約公式の幾何学的解釈</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emf/magnetic-coulomb.html">半無限ソレノイド間の力と磁荷に対するクーロンの法則</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emf/mono-field-ism.html">一場主義 (Mono-field-ism)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emf/mu0.html">真空の透磁率の数値について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emf/parity.html">電磁気学におけるパリティについて</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emf/speed-of-light.html">机の上で光速を測る</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emf/spintronics.html">スピントロニクスの不思議</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emf/theory-of-unit-systems.html">単位系の数学的構造について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emf/theory-of-unit-systems-2.html">単位系の数学的構造 (2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emf/unit-conversion.html">単位の変換について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../emf/unit-systems.html">電磁気の単位系</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../qm/index.html">量子論</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../qm/bracket.html">ブラケット記法の機微　双対 vs 内積</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../qm/bracket-error.html">岩波講座 現代物理学の基礎(第2版) 量子力学Iの誤り</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../qm/bracket-error-2.html">Re:岩波講座 現代物理学の基礎(第2版) 量子力学Iの誤り</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../qm/entanglement.html">エンタングルメントとベルの不等式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../qm/photon.html">光の量子性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../qm/weak-values.html">弱測定と幾何学的位相</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../math/index.html">数学</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../math/exponential.html">指数関数</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">その他</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">ピラニーゲージの読み</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../toys/index.html">物理おもちゃ</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../toys/cd-spectrometer.html">CD分光器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../toys/coupled-pendulum.html">連成ふりこ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../toys/eddington.html">レビ・チビタの記号</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../toys/eulers-disk.html">オイラーの円盤</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../toys/minimal-surface.html">極小曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../toys/ping-pong.html">静電ピンポン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../toys/rattle-back.html">ラトルバック (ケルトの石)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../toys/wine-glass.html">ワイングラスの共鳴を見る</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../presentation/index.html">講演資料</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../presentation/a3-meta.html">A3 Metamaterials Forum 2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../presentation/quatuo.html">QUATUO研究会発表資料</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../_tags/new.html">NEW</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../math/exponential.html">指数関数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../toys/eulers-disk.html">オイラーの円盤</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="このページをダウンロード">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/notes/others/pirani.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="ソースファイルをダウンロード"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="PDFに印刷"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="全画面モード"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="検索" aria-label="検索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ピラニーゲージの読み</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>ピラニーゲージの読み<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>水素が入った容器に窒素を追加で入れると, 全圧力が増加するにも
+かかわらず, ピラニーゲージの読みが減少するという不思議な現象が見られる.</p>
+<p>窒素・水素の混合気体をそれぞれ分圧で
+<span class="math notranslate nohighlight">\((P\sub{N_2},\, P\sub{H_2})\)</span> と表す.</p>
+<ul class="simple">
+<li><p>窒素導入前 <span class="math notranslate nohighlight">\((0,\, P\sub{H_2})\)</span></p></li>
+<li><p>窒素導入後 <span class="math notranslate nohighlight">\((P\sub{N_2},\, P\sub{H_2})\)</span></p></li>
+</ul>
+<p>水素に対するピラニーの読み <span class="math notranslate nohighlight">\(v\)</span> は
+同じ圧力の窒素の場合の <span class="math notranslate nohighlight">\(\alpha\)</span> 倍
+であるとする.
+すなわち,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0a2f7272-02c7-4778-9844-84f44be4a75c">
+<span class="eqno">(1)<a class="headerlink" href="#equation-0a2f7272-02c7-4778-9844-84f44be4a75c" title="Permalink to this equation">#</a></span>\[\begin{align}
+v = P\sub{N_2} +  \alpha P\sub{H_2}
+\end{align}\]</div>
+<p>とかける.
+<span class="math notranslate nohighlight">\(0.1\sim 1\,\U{kPa}\)</span> において <span class="math notranslate nohighlight">\(\alpha = 5\sim 10\)</span> 程度.</p>
+<p>もし,
+窒素と水素が一様に
+混ざらず,
+比重の違いや
+導入管の相対位置の違いなどのために,
+ピラニーセンサーの位置で
+窒素が優勢であると仮定する.
+ピラニーの位置における組成を
+<span class="math notranslate nohighlight">\((P'\sub{N_2},\,P'\sub{N_2})\)</span> として,
+偏在率を</p>
+<div class="amsmath math notranslate nohighlight" id="equation-acb7a21b-da34-4fc3-a133-3eb27e358c22">
+<span class="eqno">(2)<a class="headerlink" href="#equation-acb7a21b-da34-4fc3-a133-3eb27e358c22" title="Permalink to this equation">#</a></span>\[\begin{align}
+k := \frac{P'\sub{H_2}}{P\sub{H_2}}
+\end{align}\]</div>
+<p>と定義すると局所的な組成は</p>
+<div class="amsmath math notranslate nohighlight" id="equation-6075de52-ffb5-4c78-a519-90c46936b42c">
+<span class="eqno">(3)<a class="headerlink" href="#equation-6075de52-ffb5-4c78-a519-90c46936b42c" title="Permalink to this equation">#</a></span>\[\begin{align}
+(P\sub{N_2}',\, P\sub{H_2}')
+= (k P\sub{N_2},\, P\sub{N_2} + P\sub{H_2} - k P\sub{N_2})
+\end{align}\]</div>
+<p><span class="math notranslate nohighlight">\(P\sub{H_2}'\)</span> は全圧が一定であることから求められる.</p>
+<ul class="simple">
+<li><p>窒素導入前のピラニーの読みは</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight" id="equation-1d56dd6d-0014-48f2-bf6e-3f24da25b0cf">
+<span class="eqno">(4)<a class="headerlink" href="#equation-1d56dd6d-0014-48f2-bf6e-3f24da25b0cf" title="Permalink to this equation">#</a></span>\[\begin{align}
+v_1 = \alpha P\sub{H_2}
+\end{align}\]</div>
+<ul class="simple">
+<li><p>窒素導入後のピラニーの読みは</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight" id="equation-30cfeaa8-72bd-4d3c-afab-6cebaa1b823c">
+<span class="eqno">(5)<a class="headerlink" href="#equation-30cfeaa8-72bd-4d3c-afab-6cebaa1b823c" title="Permalink to this equation">#</a></span>\[\begin{align}
+v_2 = 1\cdot P\sub{N_2}’ + \alpha\cdot P\sub{H_2}’
+= (k + \alpha - k\alpha)P\sub{N_2} + \alpha P\sub{H_2}
+\end{align}\]</div>
+<p>たとえば, <span class="math notranslate nohighlight">\(k=5\)</span> と仮定すると,
+<span class="math notranslate nohighlight">\(P\sub{N_2}\)</span> の係数は <span class="math notranslate nohighlight">\(k + \alpha - k\alpha = 5 - 4\alpha\)</span>
+となり, <span class="math notranslate nohighlight">\(\alpha &gt; 5/4 = 1.25\)</span> で負の値をとる.
+つまり, わずかな偏りがあれば, 窒素を導入したにもかかわらず，ピラニーの読みは
+減少する．</p>
+<p><span class="math notranslate nohighlight">\(k=1\)</span> では　<span class="math notranslate nohighlight">\(v_2=P\sub{N_2}+\alpha P\sub{H_2}\)</span> となる.</p>
+<p>(例)
+<span class="math notranslate nohighlight">\(\alpha=5\)</span>, <span class="math notranslate nohighlight">\(k=2\)</span> を仮定する.
+<span class="math notranslate nohighlight">\(P\sub{H_2}=100\,\U{Pa}\)</span> に対して
+<span class="math notranslate nohighlight">\(P\sub{N_2}=100\,\U{Pa}\)</span> を導入したとする.
+窒素導入前のピラニーの読みは
+<span class="math notranslate nohighlight">\(v_1 = 5\times 100\,\U{Pa}=500\,\U{Pa}\)</span>
+導入後は
+<span class="math notranslate nohighlight">\(v_2 = -3\times 100\,\U{Pa} + 5\times 100\,\U{Pa}
+= 200\,\U{Pa}\)</span> となり, <span class="math notranslate nohighlight">\(300\,\U{Pa}\)</span> の見かけの減少が生じることになる.</p>
+<figure class="align-default" id="pirani">
+<a class="reference internal image-reference" href="../../_images/pirani-reading.png"><img alt="../../_images/pirani-reading.png" src="../../_images/pirani-reading.png" style="height: 300px;" />
+</a>
+<figcaption>
+<p><span class="caption-text">ピラニーゲージの読み</span><a class="headerlink" href="#pirani" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+著者 北野 正雄
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Masao Kitano.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  最終更新: 2025/06/20
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
